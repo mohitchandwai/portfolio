@@ -1,5 +1,3 @@
-#portfolio
-some infor mation about about me.
 <!DOCTYPE html>
 <html lang="en">
 <head>
