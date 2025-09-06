@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Engineer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+        }
+        .text-gradient {
+            background-image: linear-gradient(to right, #6EE7B7, #3B82F6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header -->
+    <header class="py-6 px-4 sm:px-6 lg:px-8 bg-[#161b22] shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-white transition-colors duration-300 hover:text-gray-400">Mohit chandwani</a>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-300">About</a></li>
+                    <li><a href="#skills" class="text-gray-400 hover:text-white transition-colors duration-300">Skills</a></li>
+                    <li><a href="#projects" class="text-gray-400 hover:text-white transition-colors duration-300">Projects</a></li>
+                    <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <!-- Hero Section -->
+        <section class="text-center py-20 min-h-[60vh] flex flex-col justify-center items-center">
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight tracking-tight text-white mb-4">
+                <span class="text-gradient block">Cloud Solutions Engineer</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-8">
+                I design and implement efficient, scalable, and cost-effective cloud solutions.
+            </p>
+            <a href="#projects" class="inline-block px-8 py-3 bg-white text-[#0d1117] font-semibold rounded-full shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl">View My Work</a>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-16 md:py-24">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-12">About Me</h2>
+            <div class="max-w-4xl mx-auto bg-[#161b22] rounded-3xl p-8 sm:p-12 shadow-xl border border-gray-700">
+                <p class="text-lg leading-relaxed text-gray-300">
+                    As a freelance Cloud Computing and Virtualization Specialist, I design and implement efficient, scalable, and cost-effective cloud solutions. My expertise lies in architecting and deploying <span class="text-white font-semibold">serverless event-driven architectures</span>—a skill I recently applied to a cloud cost optimization tool, leveraging over 15 <span class="text-white font-semibold">AWS services</span>. I also have extensive experience managing the cloud environment and deployment phases of complex projects, such as a real-time smart agriculture monitoring system.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-16 md:py-24">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-12">My Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Skill Card 1 -->
+                <div class="bg-[#161b22] rounded-xl p-8 shadow-md border border-gray-700">
+                    <h3 class="text-xl font-bold text-white mb-4">Cloud Computing & Virtualization</h3>
+                    <ul class="list-disc pl-5 text-gray-300 space-y-2">
+                        <li>Serverless Event-Driven Architecture</li>
+                        <li>Cloud Cost Optimization</li>
+                        <li>Infrastructure as Code (IaC)</li>
+                        <li>Deployment & Environment Management</li>
+                    </ul>
+                </div>
+                <!-- Skill Card 2 -->
+                <div class="bg-[#161b22] rounded-xl p-8 shadow-md border border-gray-700">
+                    <h3 class="text-xl font-bold text-white mb-4">AWS Services (15+)</h3>
+                    <ul class="list-disc pl-5 text-gray-300 space-y-2">
+                        <li>AWS Lambda</li>
+                        <li>Amazon S3</li>
+                        <li>Amazon EC2</li>
+                        <li>Amazon DynamoDB</li>
+                        <li>Amazon SQS & SNS</li>
+                        <li>AWS IAM</li>
+                        <li>And more...</li>
+                    </ul>
+                </div>
+                <!-- Skill Card 3 -->
+                <div class="bg-[#161b22] rounded-xl p-8 shadow-md border border-gray-700">
+                    <h3 class="text-xl font-bold text-white mb-4">Additional Skills</h3>
+                    <ul class="list-disc pl-5 text-gray-300 space-y-2">
+                        <li>CI/CD Pipelines</li>
+                        <li>Containerization (Docker)</li>
+                        <li>Real-time Data Processing</li>
+                        <li>HackerRank Contributor</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-16 md:py-24">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-12">My Projects</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Project Card 1 -->
+                <div class="bg-[#161b22] rounded-xl p-8 shadow-md border border-gray-700">
+                    <h3 class="text-2xl font-bold text-white mb-4">Serverless Cloud Cost Optimization Tool</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        Architected and implemented a serverless event-driven solution to automatically monitor and identify areas for cost optimization within a cloud environment. The system processes data from various AWS services to provide actionable insights.
+                    </p>
+                    <ul class="flex flex-wrap gap-2">
+                        <li class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full">Serverless</li>
+                        <li class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full">AWS Lambda</li>
+                        <li class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full">AWS</li>
+                        <li class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full">Event-Driven Architecture</li>
+                        <li class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full">Cost Optimization</li>
+                    </ul>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="bg-[#161b22] rounded-xl p-8 shadow-md border border-gray-700">
+                    <h3 class="text-2xl font-bold text-white mb-4">Smart Agriculture System</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        Managed the deployment and set up the entire cloud environment for a real-time monitoring and automation system for smart agriculture. This project enabled data-driven decisions to improve crop health and yield.
+                    </p>
+                    <ul class="flex flex-wrap gap-2">
+                        <li class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full">Cloud Deployment</li>
+                        <li class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full">Cloud Environment Setup</li>
+                        <li class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full">Automation</li>
+                        <li class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full">Real-Time Monitoring</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 md:py-24 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">Let's Connect</h2>
+            <p class="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
+                I'm currently available for freelance projects. Feel free to reach out to discuss how I can help you build your next cloud solution.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="mailto:chandwanimohit87m@gmail.com" class="inline-flex items-center px-6 py-3 bg-white text-[#0d1117] font-semibold rounded-full shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-2 2a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v2a2 2 0 002 2h14"></path></svg>
+                    Email Me
+                </a>
+                <a href="https://www.linkedin.com/in/mohit-chandwani-2b0b1a225/" target="_blank" class="inline-flex items-center px-6 py-3 bg-gray-700 text-gray-100 font-semibold rounded-full shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5S0 4.881 0 3.5C0 2.12 1.11 1 2.5 1s2.48 1.12 2.48 2.5zM.05 15.698h4.94V7.5H.05v8.198zM24 10.3c0-3.15-2.02-4.63-4.78-4.63C16.94 5.67 15.9 6.8 15.42 7.7V5.7h-4.94c.06 1.35 0 8.19 0 8.19h4.94V10.14c0-.9.68-1.57 1.57-1.57.87 0 1.56.67 1.56 1.57V15.7h4.94v-5.4zm-24.95-.57h.01V5.7h-5.01V15.7H-.04v-5.97z"></path></svg>
+                    LinkedIn
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 px-4 sm:px-6 lg:px-8 bg-[#161b22] text-center text-gray-400">
+        <p>&copy; 2024 Mohit chandwani. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
