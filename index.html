@@ -1,163 +1,446 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloud Engineer Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0d1117;
-            color: #c9d1d9;
-        }
-        .text-gradient {
-            background-image: linear-gradient(to right, #6EE7B7, #3B82F6);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-    </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Mohit Chandwani — Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#F7F5F0;--bg2:#EEEAE2;--ink:#1A1814;--ink2:#4A4740;--ink3:#8A8780;
+  --cream:#FBF9F4;--accent:#D4521A;--accent2:#1A5BD4;--border:#D8D4CA;--card:#FFFFFF;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Space Grotesk',sans-serif;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(247,245,240,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 3rem;height:64px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:'Playfair Display',serif;font-weight:700;font-size:1.25rem;color:var(--ink);text-decoration:none;letter-spacing:-0.02em}
+.nav-links{display:flex;gap:2rem;list-style:none;align-items:center}
+.nav-links a{color:var(--ink2);text-decoration:none;font-size:0.8rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover{color:var(--accent)}
+.nav-hire{background:var(--ink)!important;color:var(--bg)!important;padding:0.5rem 1.25rem;border-radius:100px;transition:background .2s,transform .15s!important}
+.nav-hire:hover{background:var(--accent)!important;color:#fff!important;transform:translateY(-1px)}
+#hero{min-height:100vh;padding:100px 3rem 5rem;display:grid;grid-template-columns:1fr 380px;gap:4rem;align-items:center;max-width:1280px;margin:0 auto}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:0.6rem;font-size:0.72rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem}
+.hero-eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2s ease infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(1.4)}}
+.hero-name{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(3.5rem,7vw,6.5rem);line-height:0.95;letter-spacing:-0.03em;color:var(--ink);margin-bottom:1.5rem}
+.hero-name em{font-style:italic;color:var(--accent)}
+.hero-role{font-size:1.05rem;font-weight:400;color:var(--ink2);line-height:1.7;max-width:520px;margin-bottom:2.5rem}
+.hero-actions{display:flex;gap:0.75rem;flex-wrap:wrap}
+.btn-dark{display:inline-block;padding:0.85rem 2rem;background:var(--ink);color:#F7F5F0;font-family:'Space Grotesk',sans-serif;font-size:0.82rem;font-weight:600;letter-spacing:0.04em;text-decoration:none;border-radius:100px;transition:background .2s,transform .15s,box-shadow .2s;cursor:pointer;border:none}
+.btn-dark:hover{background:var(--accent);transform:translateY(-2px);box-shadow:0 8px 24px rgba(212,82,26,0.25)}
+.btn-outline{display:inline-block;padding:0.85rem 2rem;background:transparent;color:var(--ink);font-family:'Space Grotesk',sans-serif;font-size:0.82rem;font-weight:600;letter-spacing:0.04em;text-decoration:none;border-radius:100px;border:1.5px solid var(--border);transition:border-color .2s,color .2s,transform .15s;cursor:pointer}
+.btn-outline:hover{border-color:var(--ink);color:var(--accent);transform:translateY(-2px)}
+.hero-side{display:flex;flex-direction:column;gap:1rem}
+.stat-box{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.5rem}
+.stat-box-label{font-size:0.68rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink3);margin-bottom:0.25rem}
+.stat-box-val{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:700;color:var(--ink);line-height:1}
+.stat-box-sub{font-size:0.75rem;color:var(--ink3);margin-top:0.25rem}
+.stack-pills{display:flex;gap:0.4rem;flex-wrap:wrap;margin-top:0.75rem}
+.pill{font-size:0.68rem;font-weight:500;padding:0.3rem 0.75rem;border-radius:100px;background:var(--bg2);color:var(--ink2);border:1px solid var(--border)}
+.pill-accent{background:#FBF0EB;color:var(--accent);border-color:#F0C4AE}
+.pill-blue{background:#EBF0FB;color:var(--accent2);border-color:#AEC4F0}
+.section-wrap{max-width:1280px;margin:0 auto;padding:6rem 3rem}
+.section-tag{display:inline-block;font-size:0.68rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink3);margin-bottom:0.75rem}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;letter-spacing:-0.02em;color:var(--ink);line-height:1.1;margin-bottom:3rem}
+.section-title em{font-style:italic;color:var(--accent)}
+#about{background:var(--cream)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.about-body{font-size:1.05rem;line-height:1.85;color:var(--ink2);font-weight:300}
+.about-body strong{color:var(--ink);font-weight:600}
+.about-facts{display:flex;flex-direction:column;gap:0;border:1px solid var(--border);border-radius:16px;overflow:hidden;background:var(--card)}
+.fact-row{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.5rem;border-bottom:1px solid var(--border);transition:background .15s}
+.fact-row:last-child{border-bottom:none}
+.fact-row:hover{background:var(--bg)}
+.fact-key{font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink3)}
+.fact-val{font-size:0.88rem;font-weight:600;color:var(--ink)}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.skill-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;transition:transform .2s,border-color .2s,box-shadow .2s}
+.skill-card:hover{transform:translateY(-4px);border-color:#C4BFB5;box-shadow:0 12px 40px rgba(26,24,20,0.08)}
+.skill-icon-wrap{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:1.25rem}
+.icon-orange{background:#FBF0EB}.icon-blue{background:#EBF0FB}.icon-green{background:#EBF5EB}
+.skill-title{font-size:0.95rem;font-weight:700;color:var(--ink);margin-bottom:1rem;letter-spacing:-0.01em}
+.skill-list{list-style:none;display:flex;flex-direction:column;gap:0.45rem}
+.skill-list li{font-size:0.78rem;color:var(--ink2);display:flex;align-items:center;gap:0.5rem}
+.skill-list li::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--accent);flex-shrink:0}
+.skill-tags{display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:1rem}
+#projects{background:var(--cream)}
+.projects-list{display:flex;flex-direction:column;gap:1.5rem}
+.project-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:2.5rem;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:start;transition:transform .2s,box-shadow .2s}
+.project-card:hover{transform:translateY(-3px);box-shadow:0 16px 48px rgba(26,24,20,0.1)}
+.project-badges{display:flex;gap:0.4rem;flex-wrap:wrap;margin-bottom:1rem}
+.project-title{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;letter-spacing:-0.02em;color:var(--ink);margin-bottom:0.75rem;line-height:1.2}
+.project-desc{font-size:0.85rem;color:var(--ink2);line-height:1.8;margin-bottom:1.5rem}
+.project-metrics{display:flex;gap:2rem;flex-wrap:wrap}
+.metric{border-left:2px solid var(--accent);padding-left:0.75rem}
+.metric-val{font-size:1.3rem;font-weight:700;color:var(--ink);font-family:'Playfair Display',serif}
+.metric-lbl{font-size:0.65rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink3)}
+.project-link-box{display:flex;flex-direction:column;align-items:flex-end;gap:1rem;min-width:120px}
+.project-num{font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--ink3);letter-spacing:0.1em}
+.project-cta{display:inline-flex;align-items:center;gap:0.4rem;padding:0.6rem 1.25rem;background:var(--ink);color:#F7F5F0;font-size:0.75rem;font-weight:600;border-radius:100px;text-decoration:none;transition:background .2s,transform .15s;white-space:nowrap}
+.project-cta:hover{background:var(--accent);transform:translateY(-1px)}
+.exp-timeline{display:flex;flex-direction:column}
+.exp-item{display:grid;grid-template-columns:180px 1fr;gap:2rem;padding:2.5rem 0;border-bottom:1px solid var(--border)}
+.exp-item:last-child{border-bottom:none}
+.exp-date{font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink3);padding-top:0.25rem}
+.exp-role{font-size:1.05rem;font-weight:700;color:var(--ink);margin-bottom:0.2rem}
+.exp-company{font-size:0.82rem;color:var(--accent);font-weight:500;margin-bottom:1rem}
+.exp-bullets{list-style:none;display:flex;flex-direction:column;gap:0.6rem}
+.exp-bullets li{font-size:0.82rem;color:var(--ink2);line-height:1.7;padding-left:1.1rem;position:relative}
+.exp-bullets li::before{content:'→';position:absolute;left:0;color:var(--accent);font-size:0.75rem;top:0.15rem}
+.exp-highlight{color:var(--ink);font-weight:600}
+#certifications{background:var(--cream)}
+.certs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.cert-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;display:flex;flex-direction:column;gap:0.4rem;transition:transform .2s,border-color .2s}
+.cert-card:hover{transform:translateY(-2px);border-color:#C4BFB5}
+.cert-org{font-size:0.65rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent)}
+.cert-name{font-size:0.85rem;font-weight:600;color:var(--ink);line-height:1.4}
+.cert-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.9rem;margin-bottom:0.5rem}
+#contact{background:var(--ink);color:#F7F5F0}
+#contact .section-tag{color:rgba(247,245,240,0.5)}
+#contact .section-title{color:#F7F5F0}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.contact-sub{font-size:0.95rem;color:rgba(247,245,240,0.6);line-height:1.8;margin-bottom:2rem;font-weight:300}
+.contact-links{display:flex;flex-direction:column;gap:0.75rem}
+.contact-row{display:flex;align-items:center;gap:1rem;padding:1.25rem 1.5rem;background:rgba(247,245,240,0.06);border:1px solid rgba(247,245,240,0.1);border-radius:14px;text-decoration:none;transition:background .2s,border-color .2s,transform .15s}
+.contact-row:hover{background:rgba(247,245,240,0.1);border-color:rgba(247,245,240,0.2);transform:translateX(4px)}
+.contact-icon{width:40px;height:40px;border-radius:10px;background:rgba(247,245,240,0.1);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;color:#F7F5F0}
+.contact-info{flex:1}
+.contact-lbl{font-size:0.65rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,245,240,0.4);margin-bottom:0.2rem}
+.contact-val{font-size:0.88rem;font-weight:600;color:#F7F5F0}
+.contact-arr{color:rgba(247,245,240,0.4);transition:transform .15s,color .15s;font-size:1.1rem}
+.contact-row:hover .contact-arr{transform:translateX(3px);color:rgba(247,245,240,0.8)}
+footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 3rem;display:flex;justify-content:space-between;align-items:center}
+.footer-logo{font-family:'Playfair Display',serif;font-weight:700;font-size:1rem;color:var(--ink)}
+.footer-copy{font-size:0.72rem;color:var(--ink3)}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:960px){
+  nav{padding:0 1.5rem}.nav-links{display:none}
+  #hero{grid-template-columns:1fr;padding:90px 1.5rem 3rem}.hero-side{display:none}
+  .about-grid,.contact-grid{grid-template-columns:1fr;gap:2.5rem}
+  .skills-grid{grid-template-columns:1fr}
+  .project-card{grid-template-columns:1fr}.project-link-box{flex-direction:row;align-items:center}
+  .exp-item{grid-template-columns:1fr}
+  .certs-grid{grid-template-columns:1fr 1fr}
+  .section-wrap{padding:4rem 1.5rem}
+  footer{padding:1.5rem;flex-direction:column;gap:0.5rem;text-align:center}
+}
+@media(max-width:580px){.certs-grid{grid-template-columns:1fr}.project-metrics{flex-direction:column;gap:1rem}}
+</style>
 </head>
-<body class="antialiased">
-    <!-- Header -->
-    <header class="py-6 px-4 sm:px-6 lg:px-8 bg-[#161b22] shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-xl font-bold text-white transition-colors duration-300 hover:text-gray-400">Mohit chandwani</a>
-            <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-300">About</a></li>
-                    <li><a href="#skills" class="text-gray-400 hover:text-white transition-colors duration-300">Skills</a></li>
-                    <li><a href="#projects" class="text-gray-400 hover:text-white transition-colors duration-300">Projects</a></li>
-                    <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-300">Contact</a></li>
-                </ul>
-            </nav>
+<body>
+
+<nav>
+  <a href="#hero" class="nav-logo">Mohit Chandwani</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#certifications">Certs</a></li>
+    <li><a href="#contact" class="nav-hire">Hire Me</a></li>
+  </ul>
+</nav>
+
+<section id="hero">
+  <div>
+    <div class="hero-eyebrow"><span class="hero-eyebrow-dot"></span>Open to Opportunities</div>
+    <h1 class="hero-name">Software<br><em>Engineer</em><br>&amp; Builder.</h1>
+    <p class="hero-role">I'm <strong>Mohit Chandwani</strong> — a full-stack &amp; cloud-native engineer from Agra, India, building scalable systems, DevOps pipelines, and AI-powered applications that actually ship.</p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn-dark">View Projects</a>
+      <a href="mailto:chandwanimohit87m@gmail.com" class="btn-outline">Get in Touch</a>
+    </div>
+  </div>
+  <div class="hero-side">
+    <div class="stat-box">
+      <div class="stat-box-label">LeetCode</div>
+      <div class="stat-box-val">308</div>
+      <div class="stat-box-sub">Problems solved · 1493 Rating</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-box-label">Tech Stack</div>
+      <div class="stack-pills">
+        <span class="pill pill-accent">Python</span><span class="pill pill-accent">AWS</span>
+        <span class="pill pill-blue">React</span><span class="pill pill-blue">Docker</span>
+        <span class="pill">Django</span><span class="pill">Kubernetes</span>
+        <span class="pill">GCP</span><span class="pill">GitHub Actions</span>
+      </div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-box-label">Certifications</div>
+      <div class="stat-box-val">5</div>
+      <div class="stat-box-sub">Oracle · Google Cloud · NPTEL</div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+<div class="section-wrap">
+  <div class="reveal">
+    <div class="section-tag">Who I am</div>
+    <h2 class="section-title">Driven by <em>systems</em><br>that scale &amp; last.</h2>
+  </div>
+  <div class="about-grid reveal">
+    <p class="about-body">
+      I'm a <strong>B.Tech Computer Science student at GLA University</strong> (2027 graduation) with real-world experience designing cloud-native architectures, building production-grade full-stack apps, and automating DevOps workflows end-to-end.<br><br>
+      As <strong>Technical Head of the Gloud Club</strong>, I lead hands-on workshops for 100+ students on cloud computing, CI/CD, and open-source practices — because great engineering is meant to be shared.<br><br>
+      I'm energized by hard problems: real-time data pipelines, serverless architectures, ML-integrated backends — anything that demands precision and scales under pressure.
+    </p>
+    <div class="about-facts">
+      <div class="fact-row"><span class="fact-key">Location</span><span class="fact-val">Agra, UP, India</span></div>
+      <div class="fact-row"><span class="fact-key">University</span><span class="fact-val">GLA University · 6.99 GPA</span></div>
+      <div class="fact-row"><span class="fact-key">Club Role</span><span class="fact-val">Technical Head, Gloud Club</span></div>
+      <div class="fact-row"><span class="fact-key">HackerRank</span><span class="fact-val">Contributor Badge ✦</span></div>
+      <div class="fact-row"><span class="fact-key">LeetCode</span><span class="fact-val">308 Solved · Rating 1493</span></div>
+      <div class="fact-row"><span class="fact-key">AWS Services</span><span class="fact-val">15+ Services Used</span></div>
+      <div class="fact-row"><span class="fact-key">Status</span><span class="fact-val" style="color:var(--accent)">● Available</span></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="skills">
+<div class="section-wrap">
+  <div class="reveal">
+    <div class="section-tag">What I work with</div>
+    <h2 class="section-title">Technical <em>Skills</em></h2>
+  </div>
+  <div class="skills-grid reveal">
+    <div class="skill-card">
+      <div class="skill-icon-wrap icon-orange">☁️</div>
+      <div class="skill-title">Cloud &amp; DevOps</div>
+      <ul class="skill-list">
+        <li>AWS — Elastic Beanstalk, S3, DynamoDB, Lambda</li>
+        <li>Google Cloud Platform (GCP)</li>
+        <li>Oracle Cloud Infrastructure</li>
+        <li>Docker &amp; Kubernetes</li>
+        <li>CI/CD · GitHub Actions</li>
+      </ul>
+      <div class="skill-tags">
+        <span class="pill pill-accent">Serverless</span><span class="pill">IaC</span><span class="pill">Containers</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon-wrap icon-blue">⚙️</div>
+      <div class="skill-title">Languages &amp; Frameworks</div>
+      <ul class="skill-list">
+        <li>Python — Django, Flask, data scripting</li>
+        <li>JavaScript — React, REST APIs</li>
+        <li>Java — OOP &amp; backend systems</li>
+        <li>SQL · MySQL · MongoDB</li>
+      </ul>
+      <div class="skill-tags">
+        <span class="pill pill-blue">Full Stack</span><span class="pill">REST APIs</span><span class="pill">System Design</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon-wrap icon-green">🧠</div>
+      <div class="skill-title">AI &amp; Core Engineering</div>
+      <ul class="skill-list">
+        <li>Machine Learning integrations &amp; pipelines</li>
+        <li>Generative AI (Oracle &amp; GCP certified)</li>
+        <li>Data Structures &amp; Algorithms</li>
+        <li>Distributed Systems</li>
+        <li>Real-time Data Processing</li>
+      </ul>
+      <div class="skill-tags">
+        <span class="pill">ML</span><span class="pill">Gen AI</span><span class="pill">DSA</span>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="projects">
+<div class="section-wrap">
+  <div class="reveal">
+    <div class="section-tag">What I've built</div>
+    <h2 class="section-title">Featured <em>Projects</em></h2>
+  </div>
+  <div class="projects-list reveal">
+    <div class="project-card">
+      <div>
+        <div class="project-badges">
+          <span class="pill pill-accent">AWS</span><span class="pill pill-blue">Flask</span>
+          <span class="pill">DynamoDB</span><span class="pill">Machine Learning</span>
         </div>
-    </header>
+        <h3 class="project-title">Smart Agriculture — Real-Time Monitoring &amp; Automation</h3>
+        <p class="project-desc">Designed a high-availability Flask + DynamoDB backend processing live environmental sensor data across 22 unique crop types. Built cloud-native AWS infrastructure handling 10,000+ daily data events, with integrated ML models delivering predictive crop analytics at 87% accuracy. Automated alerting for anomalous readings cut manual monitoring effort by 60%.</p>
+        <div class="project-metrics">
+          <div class="metric"><div class="metric-val">&lt;200ms</div><div class="metric-lbl">Response Time</div></div>
+          <div class="metric"><div class="metric-val">87%</div><div class="metric-lbl">ML Accuracy</div></div>
+          <div class="metric"><div class="metric-val">10K+</div><div class="metric-lbl">Daily Events</div></div>
+          <div class="metric"><div class="metric-val">-60%</div><div class="metric-lbl">Manual Work</div></div>
+        </div>
+      </div>
+      <div class="project-link-box">
+        <span class="project-num">01 / 02</span>
+        <a href="https://github.com/mohitchandwani" target="_blank" rel="noopener noreferrer" class="project-cta">GitHub →</a>
+      </div>
+    </div>
 
-    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <!-- Hero Section -->
-        <section class="text-center py-20 min-h-[60vh] flex flex-col justify-center items-center">
-            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight tracking-tight text-white mb-4">
-                <span class="text-gradient block">Cloud Solutions Engineer</span>
-            </h1>
-            <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-8">
-                I design and implement efficient, scalable, and cost-effective cloud solutions.
-            </p>
-            <a href="#projects" class="inline-block px-8 py-3 bg-white text-[#0d1117] font-semibold rounded-full shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl">View My Work</a>
-        </section>
+    <div class="project-card">
+      <div>
+        <div class="project-badges">
+          <span class="pill pill-accent">AWS Elastic Beanstalk</span><span class="pill pill-blue">Docker</span>
+          <span class="pill">GitHub Actions</span><span class="pill">Generative AI</span>
+        </div>
+        <h3 class="project-title">AI-Driven DevOps Workflow Automation</h3>
+        <p class="project-desc">Architected an end-to-end automated deployment pipeline on AWS Elastic Beanstalk via GitHub Actions, cutting deploy time from 45 minutes to under 8. Implemented Generative AI-powered code review catching 95% of style violations pre-testing. Containerized the full SDLC with Docker, achieving 99.9% deployment success rate with S3 artifact storage.</p>
+        <div class="project-metrics">
+          <div class="metric"><div class="metric-val">8 min</div><div class="metric-lbl">Deploy Time</div></div>
+          <div class="metric"><div class="metric-val">95%</div><div class="metric-lbl">Violations Caught</div></div>
+          <div class="metric"><div class="metric-val">99.9%</div><div class="metric-lbl">Success Rate</div></div>
+          <div class="metric"><div class="metric-val">-83%</div><div class="metric-lbl">Time Saved</div></div>
+        </div>
+      </div>
+      <div class="project-link-box">
+        <span class="project-num">02 / 02</span>
+        <a href="https://github.com/mohitchandwani" target="_blank" rel="noopener noreferrer" class="project-cta">GitHub →</a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
 
-        <!-- About Me Section -->
-        <section id="about" class="py-16 md:py-24">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-12">About Me</h2>
-            <div class="max-w-4xl mx-auto bg-[#161b22] rounded-3xl p-8 sm:p-12 shadow-xl border border-gray-700">
-                <p class="text-lg leading-relaxed text-gray-300">
-                    As a freelance Cloud Computing and Virtualization Specialist, I design and implement efficient, scalable, and cost-effective cloud solutions. My expertise lies in architecting and deploying <span class="text-white font-semibold">serverless event-driven architectures</span>—a skill I recently applied to a cloud cost optimization tool, leveraging over 15 <span class="text-white font-semibold">AWS services</span>. I also have extensive experience managing the cloud environment and deployment phases of complex projects, such as a real-time smart agriculture monitoring system.
-                </p>
-            </div>
-        </section>
+<section id="experience">
+<div class="section-wrap">
+  <div class="reveal">
+    <div class="section-tag">Where I've worked</div>
+    <h2 class="section-title">Experience &amp; <em>Leadership</em></h2>
+  </div>
+  <div class="exp-timeline reveal">
+    <div class="exp-item">
+      <div class="exp-date">Jun – Jul 2024</div>
+      <div>
+        <div class="exp-role">Data Analyst Intern</div>
+        <div class="exp-company">Skill Creds · Remote</div>
+        <ul class="exp-bullets">
+          <li>Developed Python-based data processing scripts for delivery cost analysis, <span class="exp-highlight">improving pipeline throughput by 25%</span>.</li>
+          <li>Refactored legacy code for delivery wage analysis, <span class="exp-highlight">reducing operational overhead by 15%</span>.</li>
+          <li>Maintained <span class="exp-highlight">99%+ data integrity</span> by resolving pipeline issues across business-critical systems.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-date">2023 – Present</div>
+      <div>
+        <div class="exp-role">Technical Head</div>
+        <div class="exp-company">Gloud Club, GLA University · Mathura, UP</div>
+        <ul class="exp-bullets">
+          <li>Lead technical workshops on cloud computing, DevOps, and software development for <span class="exp-highlight">100+ students</span>.</li>
+          <li>Organized hackathons &amp; coding events with faculty, <span class="exp-highlight">increasing participation by 40%</span>.</li>
+          <li>Mentored junior developers in cloud architecture, CI/CD, and open-source contribution.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="py-16 md:py-24">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-12">My Skills</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <!-- Skill Card 1 -->
-                <div class="bg-[#161b22] rounded-xl p-8 shadow-md border border-gray-700">
-                    <h3 class="text-xl font-bold text-white mb-4">Cloud Computing & Virtualization</h3>
-                    <ul class="list-disc pl-5 text-gray-300 space-y-2">
-                        <li>Serverless Event-Driven Architecture</li>
-                        <li>Cloud Cost Optimization</li>
-                        <li>Infrastructure as Code (IaC)</li>
-                        <li>Deployment & Environment Management</li>
-                    </ul>
-                </div>
-                <!-- Skill Card 2 -->
-                <div class="bg-[#161b22] rounded-xl p-8 shadow-md border border-gray-700">
-                    <h3 class="text-xl font-bold text-white mb-4">AWS Services (15+)</h3>
-                    <ul class="list-disc pl-5 text-gray-300 space-y-2">
-                        <li>AWS Lambda</li>
-                        <li>Amazon S3</li>
-                        <li>Amazon EC2</li>
-                        <li>Amazon DynamoDB</li>
-                        <li>Amazon SQS & SNS</li>
-                        <li>AWS IAM</li>
-                        <li>And more...</li>
-                    </ul>
-                </div>
-                <!-- Skill Card 3 -->
-                <div class="bg-[#161b22] rounded-xl p-8 shadow-md border border-gray-700">
-                    <h3 class="text-xl font-bold text-white mb-4">Additional Skills</h3>
-                    <ul class="list-disc pl-5 text-gray-300 space-y-2">
-                        <li>CI/CD Pipelines</li>
-                        <li>Containerization (Docker)</li>
-                        <li>Real-time Data Processing</li>
-                        <li>HackerRank Contributor</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+<section id="certifications">
+<div class="section-wrap">
+  <div class="reveal">
+    <div class="section-tag">Credentials</div>
+    <h2 class="section-title">Certifi<em>cations</em></h2>
+  </div>
+  <div class="certs-grid reveal">
+    <div class="cert-card">
+      <div class="cert-icon" style="background:#FBF0EB">☁</div>
+      <div class="cert-org">Oracle</div>
+      <div class="cert-name">Cloud Infrastructure Generative AI Professional</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon" style="background:#EBF0FB">G</div>
+      <div class="cert-org">Google Cloud</div>
+      <div class="cert-name">Skill Badge: Generative AI Track</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon" style="background:#FBF0EB">☁</div>
+      <div class="cert-org">Oracle</div>
+      <div class="cert-name">Cloud Application Foundation Essentials</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon" style="background:#EBF0FB">G</div>
+      <div class="cert-org">Google Cloud</div>
+      <div class="cert-name">Career Launchpad</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon" style="background:#EBF5EB">N</div>
+      <div class="cert-org">NPTEL</div>
+      <div class="cert-name">Machine Learning for Engineering &amp; Science Applications</div>
+    </div>
+  </div>
+</div>
+</section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="py-16 md:py-24">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-12">My Projects</h2>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                <!-- Project Card 1 -->
-                <div class="bg-[#161b22] rounded-xl p-8 shadow-md border border-gray-700">
-                    <h3 class="text-2xl font-bold text-white mb-4">Serverless Cloud Cost Optimization Tool</h3>
-                    <p class="text-gray-300 leading-relaxed mb-4">
-                        Architected and implemented a serverless event-driven solution to automatically monitor and identify areas for cost optimization within a cloud environment. The system processes data from various AWS services to provide actionable insights.
-                    </p>
-                    <ul class="flex flex-wrap gap-2">
-                        <li class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full">Serverless</li>
-                        <li class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full">AWS Lambda</li>
-                        <li class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full">AWS</li>
-                        <li class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full">Event-Driven Architecture</li>
-                        <li class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full">Cost Optimization</li>
-                    </ul>
-                </div>
+<section id="contact">
+<div class="section-wrap">
+  <div class="contact-grid reveal">
+    <div>
+      <div class="section-tag">Let's work together</div>
+      <h2 class="section-title">Ready to build<br><em>something great.</em></h2>
+      <p class="contact-sub">I'm open to internships, full-time roles, and freelance cloud or full-stack projects. If you're building something ambitious — let's talk.</p>
+      <a href="mailto:chandwanimohit87m@gmail.com" style="display:inline-block;padding:0.85rem 2rem;background:#F7F5F0;color:#1A1814;font-family:'Space Grotesk',sans-serif;font-size:0.82rem;font-weight:600;letter-spacing:0.04em;text-decoration:none;border-radius:100px;transition:background .2s,transform .15s" onmouseover="this.style.background='#D4521A';this.style.color='#fff'" onmouseout="this.style.background='#F7F5F0';this.style.color='#1A1814'">Send an Email</a>
+    </div>
+    <div class="contact-links">
+      <a href="mailto:chandwanimohit87m@gmail.com" class="contact-row">
+        <div class="contact-icon">✉</div>
+        <div class="contact-info">
+          <div class="contact-lbl">Email</div>
+          <div class="contact-val">chandwanimohit87m@gmail.com</div>
+        </div>
+        <span class="contact-arr">→</span>
+      </a>
+      <a href="https://www.linkedin.com/in/mohit-chandwani-2b0b1a225/" target="_blank" rel="noopener noreferrer" class="contact-row">
+        <div class="contact-icon">in</div>
+        <div class="contact-info">
+          <div class="contact-lbl">LinkedIn</div>
+          <div class="contact-val">mohit-chandwani-2b0b1a225</div>
+        </div>
+        <span class="contact-arr">→</span>
+      </a>
+      <a href="https://github.com/mohitchandwani" target="_blank" rel="noopener noreferrer" class="contact-row">
+        <div class="contact-icon">GH</div>
+        <div class="contact-info">
+          <div class="contact-lbl">GitHub</div>
+          <div class="contact-val">github.com/mohitchandwani</div>
+        </div>
+        <span class="contact-arr">→</span>
+      </a>
+      <a href="tel:+917668352855" class="contact-row">
+        <div class="contact-icon">☎</div>
+        <div class="contact-info">
+          <div class="contact-lbl">Phone</div>
+          <div class="contact-val">+91 76683 52855</div>
+        </div>
+        <span class="contact-arr">→</span>
+      </a>
+    </div>
+  </div>
+</div>
+</section>
 
-                <!-- Project Card 2 -->
-                <div class="bg-[#161b22] rounded-xl p-8 shadow-md border border-gray-700">
-                    <h3 class="text-2xl font-bold text-white mb-4">Smart Agriculture System</h3>
-                    <p class="text-gray-300 leading-relaxed mb-4">
-                        Managed the deployment and set up the entire cloud environment for a real-time monitoring and automation system for smart agriculture. This project enabled data-driven decisions to improve crop health and yield.
-                    </p>
-                    <ul class="flex flex-wrap gap-2">
-                        <li class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full">Cloud Deployment</li>
-                        <li class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full">Cloud Environment Setup</li>
-                        <li class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full">Automation</li>
-                        <li class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full">Real-Time Monitoring</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+<footer>
+  <div class="footer-logo">Mohit Chandwani</div>
+  <div class="footer-copy">© 2025 · Agra, UP, India · All rights reserved</div>
+</footer>
 
-        <!-- Contact Section -->
-        <section id="contact" class="py-16 md:py-24 text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">Let's Connect</h2>
-            <p class="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
-                I'm currently available for freelance projects. Feel free to reach out to discuss how I can help you build your next cloud solution.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                <a href="mailto:chandwanimohit87m@gmail.com" class="inline-flex items-center px-6 py-3 bg-white text-[#0d1117] font-semibold rounded-full shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-2 2a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v2a2 2 0 002 2h14"></path></svg>
-                    Email Me
-                </a>
-                <a href="https://www.linkedin.com/in/mohit-chandwani-2b0b1a225/" target="_blank" class="inline-flex items-center px-6 py-3 bg-gray-700 text-gray-100 font-semibold rounded-full shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5S0 4.881 0 3.5C0 2.12 1.11 1 2.5 1s2.48 1.12 2.48 2.5zM.05 15.698h4.94V7.5H.05v8.198zM24 10.3c0-3.15-2.02-4.63-4.78-4.63C16.94 5.67 15.9 6.8 15.42 7.7V5.7h-4.94c.06 1.35 0 8.19 0 8.19h4.94V10.14c0-.9.68-1.57 1.57-1.57.87 0 1.56.67 1.56 1.57V15.7h4.94v-5.4zm-24.95-.57h.01V5.7h-5.01V15.7H-.04v-5.97z"></path></svg>
-                    LinkedIn
-                </a>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="py-6 px-4 sm:px-6 lg:px-8 bg-[#161b22] text-center text-gray-400">
-        <p>&copy; 2024 Mohit chandwani. All rights reserved.</p>
-    </footer>
-
+<script>
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}})},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+const links=document.querySelectorAll('.nav-links a');
+const secs=document.querySelectorAll('section[id]');
+window.addEventListener('scroll',()=>{
+  let cur='';
+  secs.forEach(s=>{if(window.scrollY>=s.offsetTop-80)cur=s.id});
+  links.forEach(l=>l.style.color=l.getAttribute('href')==='#'+cur&&!l.classList.contains('nav-hire')?'var(--accent)':'');
+});
+</script>
 </body>
 </html>
