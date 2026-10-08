@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Mohit Chandwani — Software Engineer</title>
+<title>Mohit Chandwani — Cloud & Full-Stack Developer | Freelance</title>
+<meta name="description" content="Cloud and full-stack developer from Agra. Websites, AR menus and cloud backends for businesses. Founder of Mother's Care."/>
+<meta property="og:title" content="Mohit Chandwani — Cloud & Full-Stack Developer"/>
+<meta property="og:description" content="Websites, AR menus and cloud backends for businesses."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet"/>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --bg:#F7F5F0;--bg2:#EEEAE2;--ink:#1A1814;--ink2:#4A4740;--ink3:#8A8780;
-  --cream:#FBF9F4;--accent:#D4521A;--accent2:#1A5BD4;--border:#D8D4CA;--card:#FFFFFF;
-}
+:root{--bg:#F7F5F0;--bg2:#EEEAE2;--ink:#1A1814;--ink2:#4A4740;--ink3:#8A8780;--cream:#FBF9F4;--accent:#D4521A;--accent2:#1A5BD4;--border:#D8D4CA;--card:#FFFFFF}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);font-family:'Space Grotesk',sans-serif;overflow-x:hidden}
 nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(247,245,240,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 3rem;height:64px;display:flex;align-items:center;justify-content:space-between}
@@ -26,119 +26,113 @@ nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(247,245,240,
 .hero-eyebrow{display:inline-flex;align-items:center;gap:0.6rem;font-size:0.72rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem}
 .hero-eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2s ease infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(1.4)}}
-.hero-name{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(3.5rem,7vw,6.5rem);line-height:0.95;letter-spacing:-0.03em;color:var(--ink);margin-bottom:1.5rem}
+.hero-name{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(3.5rem,7vw,6.5rem);line-height:0.95;letter-spacing:-0.03em;margin-bottom:1.5rem}
 .hero-name em{font-style:italic;color:var(--accent)}
-.hero-role{font-size:1.05rem;font-weight:400;color:var(--ink2);line-height:1.7;max-width:520px;margin-bottom:2.5rem}
+.hero-role{font-size:1.05rem;color:var(--ink2);line-height:1.7;max-width:540px;margin-bottom:2.5rem}
 .hero-actions{display:flex;gap:0.75rem;flex-wrap:wrap}
-.btn-dark{display:inline-block;padding:0.85rem 2rem;background:var(--ink);color:#F7F5F0;font-family:'Space Grotesk',sans-serif;font-size:0.82rem;font-weight:600;letter-spacing:0.04em;text-decoration:none;border-radius:100px;transition:background .2s,transform .15s,box-shadow .2s;cursor:pointer;border:none}
+.btn-dark,.btn-outline{display:inline-block;padding:0.85rem 2rem;font-family:'Space Grotesk',sans-serif;font-size:0.82rem;font-weight:600;letter-spacing:0.04em;text-decoration:none;border-radius:100px;cursor:pointer;transition:background .2s,transform .15s,box-shadow .2s,border-color .2s,color .2s}
+.btn-dark{background:var(--ink);color:#F7F5F0;border:none}
 .btn-dark:hover{background:var(--accent);transform:translateY(-2px);box-shadow:0 8px 24px rgba(212,82,26,0.25)}
-.btn-outline{display:inline-block;padding:0.85rem 2rem;background:transparent;color:var(--ink);font-family:'Space Grotesk',sans-serif;font-size:0.82rem;font-weight:600;letter-spacing:0.04em;text-decoration:none;border-radius:100px;border:1.5px solid var(--border);transition:border-color .2s,color .2s,transform .15s;cursor:pointer}
+.btn-outline{background:transparent;color:var(--ink);border:1.5px solid var(--border)}
 .btn-outline:hover{border-color:var(--ink);color:var(--accent);transform:translateY(-2px)}
 .hero-side{display:flex;flex-direction:column;gap:1rem}
 .stat-box{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.5rem}
 .stat-box-label{font-size:0.68rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink3);margin-bottom:0.25rem}
-.stat-box-val{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:700;color:var(--ink);line-height:1}
+.stat-box-val{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:700;line-height:1}
 .stat-box-sub{font-size:0.75rem;color:var(--ink3);margin-top:0.25rem}
-.stack-pills{display:flex;gap:0.4rem;flex-wrap:wrap;margin-top:0.75rem}
+.stack-pills,.skill-tags{display:flex;gap:0.4rem;flex-wrap:wrap;margin-top:0.75rem}
 .pill{font-size:0.68rem;font-weight:500;padding:0.3rem 0.75rem;border-radius:100px;background:var(--bg2);color:var(--ink2);border:1px solid var(--border)}
 .pill-accent{background:#FBF0EB;color:var(--accent);border-color:#F0C4AE}
 .pill-blue{background:#EBF0FB;color:var(--accent2);border-color:#AEC4F0}
 .section-wrap{max-width:1280px;margin:0 auto;padding:6rem 3rem}
 .section-tag{display:inline-block;font-size:0.68rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink3);margin-bottom:0.75rem}
-.section-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;letter-spacing:-0.02em;color:var(--ink);line-height:1.1;margin-bottom:3rem}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;letter-spacing:-0.02em;line-height:1.1;margin-bottom:3rem}
 .section-title em{font-style:italic;color:var(--accent)}
-#about{background:var(--cream)}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+#about,#projects,#certifications{background:var(--cream)}
+.about-grid,.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
 .about-body{font-size:1.05rem;line-height:1.85;color:var(--ink2);font-weight:300}
 .about-body strong{color:var(--ink);font-weight:600}
-.about-facts{display:flex;flex-direction:column;gap:0;border:1px solid var(--border);border-radius:16px;overflow:hidden;background:var(--card)}
-.fact-row{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.5rem;border-bottom:1px solid var(--border);transition:background .15s}
+.about-facts{border:1px solid var(--border);border-radius:16px;overflow:hidden;background:var(--card)}
+.fact-row{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.5rem;border-bottom:1px solid var(--border)}
 .fact-row:last-child{border-bottom:none}
-.fact-row:hover{background:var(--bg)}
 .fact-key{font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink3)}
-.fact-val{font-size:0.88rem;font-weight:600;color:var(--ink)}
+.fact-val{font-size:0.88rem;font-weight:600}
 .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.skill-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;transition:transform .2s,border-color .2s,box-shadow .2s}
-.skill-card:hover{transform:translateY(-4px);border-color:#C4BFB5;box-shadow:0 12px 40px rgba(26,24,20,0.08)}
+.skill-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;transition:transform .2s,box-shadow .2s}
+.skill-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(26,24,20,0.08)}
 .skill-icon-wrap{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:1.25rem}
 .icon-orange{background:#FBF0EB}.icon-blue{background:#EBF0FB}.icon-green{background:#EBF5EB}
-.skill-title{font-size:0.95rem;font-weight:700;color:var(--ink);margin-bottom:1rem;letter-spacing:-0.01em}
+.skill-title{font-size:0.95rem;font-weight:700;margin-bottom:1rem}
 .skill-list{list-style:none;display:flex;flex-direction:column;gap:0.45rem}
-.skill-list li{font-size:0.78rem;color:var(--ink2);display:flex;align-items:center;gap:0.5rem}
+.skill-list li{font-size:0.8rem;color:var(--ink2);display:flex;align-items:center;gap:0.5rem}
 .skill-list li::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--accent);flex-shrink:0}
-.skill-tags{display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:1rem}
-#projects{background:var(--cream)}
 .projects-list{display:flex;flex-direction:column;gap:1.5rem}
 .project-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:2.5rem;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:start;transition:transform .2s,box-shadow .2s}
 .project-card:hover{transform:translateY(-3px);box-shadow:0 16px 48px rgba(26,24,20,0.1)}
 .project-badges{display:flex;gap:0.4rem;flex-wrap:wrap;margin-bottom:1rem}
-.project-title{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;letter-spacing:-0.02em;color:var(--ink);margin-bottom:0.75rem;line-height:1.2}
+.project-title{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:0.75rem;line-height:1.2}
 .project-desc{font-size:0.85rem;color:var(--ink2);line-height:1.8;margin-bottom:1.5rem}
 .project-metrics{display:flex;gap:2rem;flex-wrap:wrap}
 .metric{border-left:2px solid var(--accent);padding-left:0.75rem}
-.metric-val{font-size:1.3rem;font-weight:700;color:var(--ink);font-family:'Playfair Display',serif}
+.metric-val{font-size:1.3rem;font-weight:700;font-family:'Playfair Display',serif}
 .metric-lbl{font-size:0.65rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink3)}
 .project-link-box{display:flex;flex-direction:column;align-items:flex-end;gap:1rem;min-width:120px}
 .project-num{font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--ink3);letter-spacing:0.1em}
-.project-cta{display:inline-flex;align-items:center;gap:0.4rem;padding:0.6rem 1.25rem;background:var(--ink);color:#F7F5F0;font-size:0.75rem;font-weight:600;border-radius:100px;text-decoration:none;transition:background .2s,transform .15s;white-space:nowrap}
+.project-cta{display:inline-flex;padding:0.6rem 1.25rem;background:var(--ink);color:#F7F5F0;font-size:0.75rem;font-weight:600;border-radius:100px;text-decoration:none;transition:background .2s,transform .15s;white-space:nowrap}
 .project-cta:hover{background:var(--accent);transform:translateY(-1px)}
-.exp-timeline{display:flex;flex-direction:column}
 .exp-item{display:grid;grid-template-columns:180px 1fr;gap:2rem;padding:2.5rem 0;border-bottom:1px solid var(--border)}
 .exp-item:last-child{border-bottom:none}
 .exp-date{font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink3);padding-top:0.25rem}
-.exp-role{font-size:1.05rem;font-weight:700;color:var(--ink);margin-bottom:0.2rem}
+.exp-role{font-size:1.05rem;font-weight:700;margin-bottom:0.2rem}
 .exp-company{font-size:0.82rem;color:var(--accent);font-weight:500;margin-bottom:1rem}
 .exp-bullets{list-style:none;display:flex;flex-direction:column;gap:0.6rem}
 .exp-bullets li{font-size:0.82rem;color:var(--ink2);line-height:1.7;padding-left:1.1rem;position:relative}
 .exp-bullets li::before{content:'→';position:absolute;left:0;color:var(--accent);font-size:0.75rem;top:0.15rem}
 .exp-highlight{color:var(--ink);font-weight:600}
-#certifications{background:var(--cream)}
 .certs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-.cert-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;display:flex;flex-direction:column;gap:0.4rem;transition:transform .2s,border-color .2s}
-.cert-card:hover{transform:translateY(-2px);border-color:#C4BFB5}
+.cert-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;display:flex;flex-direction:column;gap:0.4rem;transition:transform .2s}
+.cert-card:hover{transform:translateY(-2px)}
 .cert-org{font-size:0.65rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent)}
-.cert-name{font-size:0.85rem;font-weight:600;color:var(--ink);line-height:1.4}
+.cert-name{font-size:0.85rem;font-weight:600;line-height:1.4}
 .cert-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.9rem;margin-bottom:0.5rem}
 #contact{background:var(--ink);color:#F7F5F0}
 #contact .section-tag{color:rgba(247,245,240,0.5)}
-#contact .section-title{color:#F7F5F0}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.contact-grid{align-items:center}
 .contact-sub{font-size:0.95rem;color:rgba(247,245,240,0.6);line-height:1.8;margin-bottom:2rem;font-weight:300}
 .contact-links{display:flex;flex-direction:column;gap:0.75rem}
-.contact-row{display:flex;align-items:center;gap:1rem;padding:1.25rem 1.5rem;background:rgba(247,245,240,0.06);border:1px solid rgba(247,245,240,0.1);border-radius:14px;text-decoration:none;transition:background .2s,border-color .2s,transform .15s}
-.contact-row:hover{background:rgba(247,245,240,0.1);border-color:rgba(247,245,240,0.2);transform:translateX(4px)}
-.contact-icon{width:40px;height:40px;border-radius:10px;background:rgba(247,245,240,0.1);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;color:#F7F5F0}
+.contact-row{display:flex;align-items:center;gap:1rem;padding:1.1rem 1.5rem;background:rgba(247,245,240,0.06);border:1px solid rgba(247,245,240,0.1);border-radius:14px;text-decoration:none;color:inherit;transition:background .2s,transform .15s}
+.contact-row:hover{background:rgba(247,245,240,0.1);transform:translateX(4px)}
+.contact-icon{width:40px;height:40px;border-radius:10px;background:rgba(247,245,240,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .contact-info{flex:1}
 .contact-lbl{font-size:0.65rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,245,240,0.4);margin-bottom:0.2rem}
-.contact-val{font-size:0.88rem;font-weight:600;color:#F7F5F0}
-.contact-arr{color:rgba(247,245,240,0.4);transition:transform .15s,color .15s;font-size:1.1rem}
-.contact-row:hover .contact-arr{transform:translateX(3px);color:rgba(247,245,240,0.8)}
+.contact-val{font-size:0.88rem;font-weight:600}
+.btn-light{display:inline-block;padding:0.85rem 2rem;background:#F7F5F0;color:#1A1814;font-size:0.82rem;font-weight:600;text-decoration:none;border-radius:100px;transition:background .2s,color .2s}
+.btn-light:hover{background:var(--accent);color:#fff}
 footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 3rem;display:flex;justify-content:space-between;align-items:center}
-.footer-logo{font-family:'Playfair Display',serif;font-weight:700;font-size:1rem;color:var(--ink)}
+.footer-logo{font-family:'Playfair Display',serif;font-weight:700}
 .footer-copy{font-size:0.72rem;color:var(--ink3)}
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease}
 .reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.hero-eyebrow-dot{animation:none}}
 @media(max-width:960px){
-  nav{padding:0 1.5rem}.nav-links{display:none}
-  #hero{grid-template-columns:1fr;padding:90px 1.5rem 3rem}.hero-side{display:none}
-  .about-grid,.contact-grid{grid-template-columns:1fr;gap:2.5rem}
-  .skills-grid{grid-template-columns:1fr}
-  .project-card{grid-template-columns:1fr}.project-link-box{flex-direction:row;align-items:center}
-  .exp-item{grid-template-columns:1fr}
-  .certs-grid{grid-template-columns:1fr 1fr}
-  .section-wrap{padding:4rem 1.5rem}
-  footer{padding:1.5rem;flex-direction:column;gap:0.5rem;text-align:center}
-}
-@media(max-width:580px){.certs-grid{grid-template-columns:1fr}.project-metrics{flex-direction:column;gap:1rem}}
+nav{padding:0 1.5rem}.nav-links li:not(:last-child){display:none}
+#hero{grid-template-columns:1fr;padding:90px 1.5rem 3rem}.hero-side{display:none}
+.about-grid,.contact-grid{grid-template-columns:1fr;gap:2.5rem}
+.skills-grid{grid-template-columns:1fr}
+.project-card{grid-template-columns:1fr;padding:1.75rem}.project-link-box{flex-direction:row;align-items:center}
+.exp-item{grid-template-columns:1fr;gap:0.5rem}
+.certs-grid{grid-template-columns:1fr 1fr}
+.section-wrap{padding:4rem 1.5rem}
+footer{padding:1.5rem;flex-direction:column;gap:0.5rem;text-align:center}}
+@media(max-width:580px){.certs-grid{grid-template-columns:1fr}.project-metrics{gap:1rem}}
 </style>
 </head>
 <body>
-
 <nav>
   <a href="#hero" class="nav-logo">Mohit Chandwani</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
+    <li><a href="#services">Services</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#certifications">Certs</a></li>
@@ -148,19 +142,19 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 3rem
 
 <section id="hero">
   <div>
-    <div class="hero-eyebrow"><span class="hero-eyebrow-dot"></span>Open to Opportunities</div>
-    <h1 class="hero-name">Software<br><em>Engineer</em><br>&amp; Builder.</h1>
-    <p class="hero-role">I'm <strong>Mohit Chandwani</strong> — a full-stack &amp; cloud-native engineer from Agra, India, building scalable systems, DevOps pipelines, and AI-powered applications that actually ship.</p>
+    <div class="hero-eyebrow"><span class="hero-eyebrow-dot"></span>Open to Freelance &amp; Full-time</div>
+    <h1 class="hero-name">Cloud<br><em>&amp; Full-Stack</em><br>Developer.</h1>
+    <p class="hero-role">I'm <strong>Mohit Chandwani</strong> from Agra, India. I build websites, AR menus and cloud-native apps for businesses, and I'm the founder of <strong>Mother's Care</strong>, a clinical AI startup.</p>
     <div class="hero-actions">
-      <a href="#projects" class="btn-dark">View Projects</a>
-      <a href="mailto:chandwanimohit87m@gmail.com" class="btn-outline">Get in Touch</a>
+      <a href="https://wa.me/917668352855?text=Hi%20Mohit%2C%20mujhe%20website%20ke%20baare%20me%20baat%20karni%20hai" target="_blank" rel="noopener noreferrer" class="btn-dark">WhatsApp Me</a>
+      <a href="#projects" class="btn-outline">View Projects</a>
     </div>
   </div>
   <div class="hero-side">
     <div class="stat-box">
       <div class="stat-box-label">LeetCode</div>
-      <div class="stat-box-val">308</div>
-      <div class="stat-box-sub">Problems solved · 1493 Rating</div>
+      <div class="stat-box-val">364+</div>
+      <div class="stat-box-sub">Problems solved · 1593+ Rating</div>
     </div>
     <div class="stat-box">
       <div class="stat-box-label">Tech Stack</div>
@@ -187,70 +181,46 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 3rem
   </div>
   <div class="about-grid reveal">
     <p class="about-body">
-      I'm a <strong>B.Tech Computer Science student at GLA University</strong> (2027 graduation) with real-world experience designing cloud-native architectures, building production-grade full-stack apps, and automating DevOps workflows end-to-end.<br><br>
-      As <strong>Technical Head of the Gloud Club</strong>, I lead hands-on workshops for 100+ students on cloud computing, CI/CD, and open-source practices — because great engineering is meant to be shared.<br><br>
-      I'm energized by hard problems: real-time data pipelines, serverless architectures, ML-integrated backends — anything that demands precision and scales under pressure.
+      I'm a <strong>B.Tech Computer Science student at GLA University</strong> (graduating 2027), specializing in cloud computing. I design cloud-native architectures, build production-grade full-stack apps and automate DevOps workflows.<br><br>
+      I'm the <strong>Founder of Mother's Care</strong> and <strong>Technical Head of the Gloud Club</strong>, where I lead hands-on workshops for 100+ students on cloud, CI/CD and open source.<br><br>
+      I also freelance, building websites, AR experiences and cloud backends for local businesses.
     </p>
     <div class="about-facts">
       <div class="fact-row"><span class="fact-key">Location</span><span class="fact-val">Agra, UP, India</span></div>
-      <div class="fact-row"><span class="fact-key">University</span><span class="fact-val">GLA University · 6.99 GPA</span></div>
+      <div class="fact-row"><span class="fact-key">University</span><span class="fact-val">GLA University · 2027</span></div>
+      <div class="fact-row"><span class="fact-key">Startup</span><span class="fact-val">Founder, Mother's Care</span></div>
       <div class="fact-row"><span class="fact-key">Club Role</span><span class="fact-val">Technical Head, Gloud Club</span></div>
-      <div class="fact-row"><span class="fact-key">HackerRank</span><span class="fact-val">Contributor Badge ✦</span></div>
-      <div class="fact-row"><span class="fact-key">LeetCode</span><span class="fact-val">308 Solved · Rating 1493</span></div>
-      <div class="fact-row"><span class="fact-key">AWS Services</span><span class="fact-val">15+ Services Used</span></div>
+      <div class="fact-row"><span class="fact-key">LeetCode</span><span class="fact-val">364+ Solved · 1593+</span></div>
       <div class="fact-row"><span class="fact-key">Status</span><span class="fact-val" style="color:var(--accent)">● Available</span></div>
     </div>
   </div>
 </div>
 </section>
 
-<section id="skills">
+<section id="services">
 <div class="section-wrap">
   <div class="reveal">
-    <div class="section-tag">What I work with</div>
-    <h2 class="section-title">Technical <em>Skills</em></h2>
+    <div class="section-tag">For businesses</div>
+    <h2 class="section-title">What I can <em>build for you</em></h2>
   </div>
   <div class="skills-grid reveal">
     <div class="skill-card">
-      <div class="skill-icon-wrap icon-orange">☁️</div>
-      <div class="skill-title">Cloud &amp; DevOps</div>
-      <ul class="skill-list">
-        <li>AWS — Elastic Beanstalk, S3, DynamoDB, Lambda</li>
-        <li>Google Cloud Platform (GCP)</li>
-        <li>Oracle Cloud Infrastructure</li>
-        <li>Docker &amp; Kubernetes</li>
-        <li>CI/CD · GitHub Actions</li>
-      </ul>
-      <div class="skill-tags">
-        <span class="pill pill-accent">Serverless</span><span class="pill">IaC</span><span class="pill">Containers</span>
-      </div>
+      <div class="skill-icon-wrap icon-orange">🌐</div>
+      <div class="skill-title">Business Website</div>
+      <ul class="skill-list"><li>Mobile-friendly and fast</li><li>Google pe dikhne layak (SEO basics)</li><li>WhatsApp + call button</li><li>5-7 din me ready</li></ul>
+      <div class="skill-tags"><span class="pill pill-accent">Starting ₹____</span></div>
     </div>
     <div class="skill-card">
-      <div class="skill-icon-wrap icon-blue">⚙️</div>
-      <div class="skill-title">Languages &amp; Frameworks</div>
-      <ul class="skill-list">
-        <li>Python — Django, Flask, data scripting</li>
-        <li>JavaScript — React, REST APIs</li>
-        <li>Java — OOP &amp; backend systems</li>
-        <li>SQL · MySQL · MongoDB</li>
-      </ul>
-      <div class="skill-tags">
-        <span class="pill pill-blue">Full Stack</span><span class="pill">REST APIs</span><span class="pill">System Design</span>
-      </div>
+      <div class="skill-icon-wrap icon-blue">🍽️</div>
+      <div class="skill-title">AR / 3D Menu</div>
+      <ul class="skill-list"><li>Restaurants ke liye AR menu</li><li>Customer phone se dish 3D me dekhe</li><li>Lead capture form</li></ul>
+      <div class="skill-tags"><span class="pill pill-accent">Starting ₹____</span></div>
     </div>
     <div class="skill-card">
-      <div class="skill-icon-wrap icon-green">🧠</div>
-      <div class="skill-title">AI &amp; Core Engineering</div>
-      <ul class="skill-list">
-        <li>Machine Learning integrations &amp; pipelines</li>
-        <li>Generative AI (Oracle &amp; GCP certified)</li>
-        <li>Data Structures &amp; Algorithms</li>
-        <li>Distributed Systems</li>
-        <li>Real-time Data Processing</li>
-      </ul>
-      <div class="skill-tags">
-        <span class="pill">ML</span><span class="pill">Gen AI</span><span class="pill">DSA</span>
-      </div>
+      <div class="skill-icon-wrap icon-green">☁️</div>
+      <div class="skill-title">Cloud &amp; Automation</div>
+      <ul class="skill-list"><li>AWS backends, APIs, dashboards</li><li>Booking and lead automation</li><li>Deployment and maintenance</li></ul>
+      <div class="skill-tags"><span class="pill pill-accent">Custom quote</span></div>
     </div>
   </div>
 </div>
@@ -266,20 +236,39 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 3rem
     <div class="project-card">
       <div>
         <div class="project-badges">
+          <span class="pill pill-accent">AWS Lambda</span><span class="pill pill-blue">Django</span>
+          <span class="pill">Amazon Bedrock</span><span class="pill">Pinecone</span>
+        </div>
+        <h3 class="project-title">Mother's Care — Clinical AI for Pre-Consultation Triage</h3>
+        <p class="project-desc">Cloud-native platform that closes the patient-to-doctor communication gap in India. Patients finish a digital triage in under 90 seconds, and doctors get AI reports pre-coded with ICD-10 before the consultation. Udyam-registered startup, International Ideathon 2026 winner.</p>
+        <div class="project-metrics">
+          <div class="metric"><div class="metric-val">&lt;90s</div><div class="metric-lbl">Triage</div></div>
+          <div class="metric"><div class="metric-val">ICD-10</div><div class="metric-lbl">Pre-coded Reports</div></div>
+          <div class="metric"><div class="metric-val">2026</div><div class="metric-lbl">Ideathon Winner</div></div>
+        </div>
+      </div>
+      <div class="project-link-box">
+        <span class="project-num">01 / 03</span>
+        <a href="https://motherscare.onrender.com" target="_blank" rel="noopener noreferrer" class="project-cta">Live Site →</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div>
+        <div class="project-badges">
           <span class="pill pill-accent">AWS</span><span class="pill pill-blue">Flask</span>
           <span class="pill">DynamoDB</span><span class="pill">Machine Learning</span>
         </div>
         <h3 class="project-title">Smart Agriculture — Real-Time Monitoring &amp; Automation</h3>
-        <p class="project-desc">Designed a high-availability Flask + DynamoDB backend processing live environmental sensor data across 22 unique crop types. Built cloud-native AWS infrastructure handling 10,000+ daily data events, with integrated ML models delivering predictive crop analytics at 87% accuracy. Automated alerting for anomalous readings cut manual monitoring effort by 60%.</p>
+        <p class="project-desc">Flask + DynamoDB backend processing live environmental sensor data across 22 crop types, on cloud-native AWS infrastructure. Integrated ML models give predictive crop analytics, and automated alerts flag anomalous readings.</p>
         <div class="project-metrics">
-          <div class="metric"><div class="metric-val">&lt;200ms</div><div class="metric-lbl">Response Time</div></div>
-          <div class="metric"><div class="metric-val">87%</div><div class="metric-lbl">ML Accuracy</div></div>
-          <div class="metric"><div class="metric-val">10K+</div><div class="metric-lbl">Daily Events</div></div>
-          <div class="metric"><div class="metric-val">-60%</div><div class="metric-lbl">Manual Work</div></div>
+          <div class="metric"><div class="metric-val">22</div><div class="metric-lbl">Crop Types</div></div>
+          <div class="metric"><div class="metric-val">Live</div><div class="metric-lbl">Sensor Data</div></div>
+          <div class="metric"><div class="metric-val">ML</div><div class="metric-lbl">Predictive Analytics</div></div>
         </div>
       </div>
       <div class="project-link-box">
-        <span class="project-num">01 / 02</span>
+        <span class="project-num">02 / 03</span>
         <a href="https://github.com/mohitchandwai/SMART-AGRICULTURE-USING-REAL-TIME-MONITORING-AND-AUTOMATION" target="_blank" rel="noopener noreferrer" class="project-cta">GitHub →</a>
       </div>
     </div>
@@ -288,21 +277,46 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 3rem
       <div>
         <div class="project-badges">
           <span class="pill pill-accent">AWS Elastic Beanstalk</span><span class="pill pill-blue">Docker</span>
-          <span class="pill">GitHub Actions</span><span class="pill">Generative AI</span>
+          <span class="pill">GitHub Actions</span><span class="pill">AI Code Review</span>
         </div>
         <h3 class="project-title">AI-Driven DevOps Workflow Automation</h3>
-        <p class="project-desc">Architected an end-to-end automated deployment pipeline on AWS Elastic Beanstalk via GitHub Actions, cutting deploy time from 45 minutes to under 8. Implemented Generative AI-powered code review catching 95% of style violations pre-testing. Containerized the full SDLC with Docker, achieving 99.9% deployment success rate with S3 artifact storage.</p>
+        <p class="project-desc">CI/CD pipeline on GitHub Actions that builds and tests in Docker, sends each git diff to an LLM for automated code review, and deploys to AWS Elastic Beanstalk. Failures trigger email notifications.</p>
         <div class="project-metrics">
-          <div class="metric"><div class="metric-val">8 min</div><div class="metric-lbl">Deploy Time</div></div>
-          <div class="metric"><div class="metric-val">95%</div><div class="metric-lbl">Violations Caught</div></div>
-          <div class="metric"><div class="metric-val">99.9%</div><div class="metric-lbl">Success Rate</div></div>
-          <div class="metric"><div class="metric-val">-83%</div><div class="metric-lbl">Time Saved</div></div>
+          <div class="metric"><div class="metric-val">CI/CD</div><div class="metric-lbl">Automated</div></div>
+          <div class="metric"><div class="metric-val">AI</div><div class="metric-lbl">Code Review</div></div>
+          <div class="metric"><div class="metric-val">Docker</div><div class="metric-lbl">Containerized</div></div>
         </div>
       </div>
       <div class="project-link-box">
-        <span class="project-num">02 / 02</span>
+        <span class="project-num">03 / 03</span>
         <a href="https://github.com/mohitchandwai/ai-driven-devops-workflow-automation-" target="_blank" rel="noopener noreferrer" class="project-cta">GitHub →</a>
       </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="skills">
+<div class="section-wrap">
+  <div class="reveal">
+    <div class="section-tag">What I work with</div>
+    <h2 class="section-title">Technical <em>Skills</em></h2>
+  </div>
+  <div class="skills-grid reveal">
+    <div class="skill-card">
+      <div class="skill-icon-wrap icon-orange">☁️</div>
+      <div class="skill-title">Cloud &amp; DevOps</div>
+      <ul class="skill-list"><li>AWS: Elastic Beanstalk, S3, DynamoDB, Lambda</li><li>Google Cloud Platform</li><li>Oracle Cloud Infrastructure</li><li>Docker &amp; Kubernetes</li><li>CI/CD with GitHub Actions</li></ul>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon-wrap icon-blue">⚙️</div>
+      <div class="skill-title">Languages &amp; Frameworks</div>
+      <ul class="skill-list"><li>Python: Django, Flask</li><li>JavaScript: React, Node.js, REST APIs</li><li>Java: OOP &amp; backend systems</li><li>SQL · MySQL · MongoDB</li></ul>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon-wrap icon-green">🧠</div>
+      <div class="skill-title">AI &amp; Core Engineering</div>
+      <ul class="skill-list"><li>LLM integrations (Amazon Bedrock)</li><li>Generative AI (Oracle &amp; GCP certified)</li><li>Data Structures &amp; Algorithms</li><li>Real-time data processing</li></ul>
     </div>
   </div>
 </div>
@@ -314,16 +328,15 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 3rem
     <div class="section-tag">Where I've worked</div>
     <h2 class="section-title">Experience &amp; <em>Leadership</em></h2>
   </div>
-  <div class="exp-timeline reveal">
+  <div class="reveal">
     <div class="exp-item">
-      <div class="exp-date">Jun – Jul 2024</div>
+      <div class="exp-date">Present</div>
       <div>
-        <div class="exp-role">Data Analyst Intern</div>
-        <div class="exp-company">Skill Creds · Remote</div>
+        <div class="exp-role">Founder &amp; Cloud-AI Architect</div>
+        <div class="exp-company">Mother's Care · Udyam-registered MedTech startup</div>
         <ul class="exp-bullets">
-          <li>Developed Python-based data processing scripts for delivery cost analysis, <span class="exp-highlight">improving pipeline throughput by 25%</span>.</li>
-          <li>Refactored legacy code for delivery wage analysis, <span class="exp-highlight">reducing operational overhead by 15%</span>.</li>
-          <li>Maintained <span class="exp-highlight">99%+ data integrity</span> by resolving pipeline issues across business-critical systems.</li>
+          <li>Architect a cloud-native clinical AI platform on <span class="exp-highlight">AWS Lambda, Amazon Bedrock and Pinecone</span> for pre-consultation triage in India.</li>
+          <li>Won the <span class="exp-highlight">International Ideathon 2026</span> among 200+ global startups.</li>
         </ul>
       </div>
     </div>
@@ -333,9 +346,20 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 3rem
         <div class="exp-role">Technical Head</div>
         <div class="exp-company">Gloud Club, GLA University · Mathura, UP</div>
         <ul class="exp-bullets">
-          <li>Lead technical workshops on cloud computing, DevOps, and software development for <span class="exp-highlight">100+ students</span>.</li>
-          <li>Organized hackathons &amp; coding events with faculty, <span class="exp-highlight">increasing participation by 40%</span>.</li>
-          <li>Mentored junior developers in cloud architecture, CI/CD, and open-source contribution.</li>
+          <li>Lead technical workshops on cloud, DevOps and software development for <span class="exp-highlight">100+ students</span>.</li>
+          <li>Organized hackathons and coding events with faculty, <span class="exp-highlight">increasing participation by 40%</span>.</li>
+          <li>Mentored junior developers in cloud architecture, CI/CD and open-source contribution.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-date">Jun – Jul 2024</div>
+      <div>
+        <div class="exp-role">Data Analyst Intern</div>
+        <div class="exp-company">Skill Creds · Remote</div>
+        <ul class="exp-bullets">
+          <li>Built Python data-processing scripts for delivery cost analysis, <span class="exp-highlight">improving pipeline throughput by 25%</span>.</li>
+          <li>Refactored legacy wage-analysis code, <span class="exp-highlight">reducing operational overhead by 15%</span>.</li>
         </ul>
       </div>
     </div>
@@ -350,31 +374,11 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 3rem
     <h2 class="section-title">Certifi<em>cations</em></h2>
   </div>
   <div class="certs-grid reveal">
-    <div class="cert-card">
-      <div class="cert-icon" style="background:#FBF0EB">☁</div>
-      <div class="cert-org">Oracle</div>
-      <div class="cert-name">Cloud Infrastructure Generative AI Professional</div>
-    </div>
-    <div class="cert-card">
-      <div class="cert-icon" style="background:#EBF0FB">G</div>
-      <div class="cert-org">Google Cloud</div>
-      <div class="cert-name">Skill Badge: Generative AI Track</div>
-    </div>
-    <div class="cert-card">
-      <div class="cert-icon" style="background:#FBF0EB">☁</div>
-      <div class="cert-org">Oracle</div>
-      <div class="cert-name">Cloud Application Foundation Essentials</div>
-    </div>
-    <div class="cert-card">
-      <div class="cert-icon" style="background:#EBF0FB">G</div>
-      <div class="cert-org">Google Cloud</div>
-      <div class="cert-name">Career Launchpad</div>
-    </div>
-    <div class="cert-card">
-      <div class="cert-icon" style="background:#EBF5EB">N</div>
-      <div class="cert-org">NPTEL</div>
-      <div class="cert-name">Machine Learning for Engineering &amp; Science Applications</div>
-    </div>
+    <div class="cert-card"><div class="cert-icon" style="background:#FBF0EB">☁</div><div class="cert-org">Oracle</div><div class="cert-name">Cloud Infrastructure Generative AI Professional</div></div>
+    <div class="cert-card"><div class="cert-icon" style="background:#EBF0FB">G</div><div class="cert-org">Google Cloud</div><div class="cert-name">Skill Badge: Generative AI Track</div></div>
+    <div class="cert-card"><div class="cert-icon" style="background:#FBF0EB">☁</div><div class="cert-org">Oracle</div><div class="cert-name">Cloud Application Foundation Essentials</div></div>
+    <div class="cert-card"><div class="cert-icon" style="background:#EBF0FB">G</div><div class="cert-org">Google Cloud</div><div class="cert-name">Career Launchpad</div></div>
+    <div class="cert-card"><div class="cert-icon" style="background:#EBF5EB">N</div><div class="cert-org">NPTEL</div><div class="cert-name">Machine Learning for Engineering &amp; Science Applications</div></div>
   </div>
 </div>
 </section>
@@ -385,42 +389,14 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 3rem
     <div>
       <div class="section-tag">Let's work together</div>
       <h2 class="section-title">Ready to build<br><em>something great.</em></h2>
-      <p class="contact-sub">I'm open to internships, full-time roles, and freelance cloud or full-stack projects. If you're building something ambitious — let's talk.</p>
-      <a href="mailto:chandwanimohit87m@gmail.com" style="display:inline-block;padding:0.85rem 2rem;background:#F7F5F0;color:#1A1814;font-family:'Space Grotesk',sans-serif;font-size:0.82rem;font-weight:600;letter-spacing:0.04em;text-decoration:none;border-radius:100px;transition:background .2s,transform .15s" onmouseover="this.style.background='#D4521A';this.style.color='#fff'" onmouseout="this.style.background='#F7F5F0';this.style.color='#1A1814'">Send an Email</a>
+      <p class="contact-sub">Need a website, an AR menu or a cloud backend for your business? Message me on WhatsApp and I'll reply with a plan and a quote. I'm also open to internships and full-time roles.</p>
+      <a href="https://wa.me/917668352855?text=Hi%20Mohit%2C%20mujhe%20website%20ke%20baare%20me%20baat%20karni%20hai" target="_blank" rel="noopener noreferrer" class="btn-light">Chat on WhatsApp</a>
     </div>
     <div class="contact-links">
-      <a href="mailto:chandwanimohit87m@gmail.com" class="contact-row">
-        <div class="contact-icon">✉</div>
-        <div class="contact-info">
-          <div class="contact-lbl">Email</div>
-          <div class="contact-val">chandwanimohit87m@gmail.com</div>
-        </div>
-        <span class="contact-arr">→</span>
-      </a>
-      <a href="https://www.linkedin.com/in/mohit-chandwani-2b0b1a225/" target="_blank" rel="noopener noreferrer" class="contact-row">
-        <div class="contact-icon">in</div>
-        <div class="contact-info">
-          <div class="contact-lbl">LinkedIn</div>
-          <div class="contact-val">mohit-chandwani-2b0b1a225</div>
-        </div>
-        <span class="contact-arr">→</span>
-      </a>
-      <a href="https://github.com/mohitchandwani" target="_blank" rel="noopener noreferrer" class="contact-row">
-        <div class="contact-icon">GH</div>
-        <div class="contact-info">
-          <div class="contact-lbl">GitHub</div>
-          <div class="contact-val">github.com/mohitchandwani</div>
-        </div>
-        <span class="contact-arr">→</span>
-      </a>
-      <a href="tel:+917668352855" class="contact-row">
-        <div class="contact-icon">☎</div>
-        <div class="contact-info">
-          <div class="contact-lbl">Phone</div>
-          <div class="contact-val">+91 76683 52855</div>
-        </div>
-        <span class="contact-arr">→</span>
-      </a>
+      <a href="https://wa.me/917668352855" target="_blank" rel="noopener noreferrer" class="contact-row"><div class="contact-icon">💬</div><div class="contact-info"><div class="contact-lbl">WhatsApp</div><div class="contact-val">+91 76683 52855</div></div></a>
+      <a href="mailto:chandwanimohit87m@gmail.com" class="contact-row"><div class="contact-icon">✉</div><div class="contact-info"><div class="contact-lbl">Email</div><div class="contact-val">chandwanimohit87m@gmail.com</div></div></a>
+      <a href="https://www.linkedin.com/in/mohit-chandwani-2b0b1a225/" target="_blank" rel="noopener noreferrer" class="contact-row"><div class="contact-icon">in</div><div class="contact-info"><div class="contact-lbl">LinkedIn</div><div class="contact-val">mohit-chandwani-2b0b1a225</div></div></a>
+      <a href="https://github.com/mohitchandwai" target="_blank" rel="noopener noreferrer" class="contact-row"><div class="contact-icon">GH</div><div class="contact-info"><div class="contact-lbl">GitHub</div><div class="contact-val">github.com/mohitchandwai</div></div></a>
     </div>
   </div>
 </div>
@@ -428,19 +404,15 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 3rem
 
 <footer>
   <div class="footer-logo">Mohit Chandwani</div>
-  <div class="footer-copy">© 2025 · Agra, UP, India · All rights reserved</div>
+  <div class="footer-copy">© 2026 · Agra, UP, India</div>
 </footer>
 
 <script>
-const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}})},{threshold:0.1});
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}})},{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-const links=document.querySelectorAll('.nav-links a');
-const secs=document.querySelectorAll('section[id]');
-window.addEventListener('scroll',()=>{
-  let cur='';
-  secs.forEach(s=>{if(window.scrollY>=s.offsetTop-80)cur=s.id});
-  links.forEach(l=>l.style.color=l.getAttribute('href')==='#'+cur&&!l.classList.contains('nav-hire')?'var(--accent)':'');
-});
+const links=document.querySelectorAll('.nav-links a'),secs=document.querySelectorAll('section[id]');
+window.addEventListener('scroll',()=>{let c='';secs.forEach(s=>{if(scrollY>=s.offsetTop-80)c=s.id});
+links.forEach(l=>l.style.color=l.getAttribute('href')==='#'+c&&!l.classList.contains('nav-hire')?'var(--accent)':'')});
 </script>
 </body>
 </html>
